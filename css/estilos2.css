@@ -35,7 +35,7 @@ li, a {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 5% 0%;
 }
@@ -50,7 +50,7 @@ nav ul li a {
     font-size: 0.8rem;
 }
 
-.boton, .boton-2, .boton-info { 
+.boton, .boton-2, span { 
     border-radius: 50px;
     padding: 1% 2.3%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
@@ -59,12 +59,12 @@ nav ul li a {
     
 }
 
-.boton-info, .boton a {
+ .boton a, span {
     color:var(--text-bg-color);
     margin-right:4%;
 }
 
-.boton, .boton-info {
+.boton, span {
     background-color: var(--bg-color-button); 
 }
 
@@ -73,23 +73,23 @@ nav ul li a {
     color: var(--bg-color-button);
 }
 
-/* .boton-info{
-    margin-right:4%;
-    color: var(--text-bg-color)
-} */
+
 
 /* Seccion general */
 
     /* Home */
 
+.home, .nosotros{
+    display: flex;
+    justify-content: space-between;
+    }  
 
-.home, .nosotros, .tit-test, .testimonios,  .banner, footer, .boton-3 {
+ .tit-test, .testimonios,  .banner, footer, .boton-3 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     
         }
-
 
 h1 {
     font-weight: var(--weight-3);
@@ -122,7 +122,7 @@ h2{
     font-weight: var(--weight-3);
     font-size:2.2rem ;
     color: var(--tex-color-main);
-    padding: 0% 0% 5%;
+    padding: 0% 0% 10%;
     
 }
 
@@ -131,6 +131,9 @@ h2{
     color: var(--text-color-secon);
     font-weight: var(--weight-2);
 }
+
+.caracteristicas{padding-left: 9%;}
+
 
 /*Testimonios */
 
@@ -142,7 +145,7 @@ h2{
 
 .avatar{
     position: absolute;
-    bottom: 85%;
+    bottom: 88%;
     left: 42.5%;
     width: 70px;
     height: 70px;
@@ -159,6 +162,11 @@ h2{
 
 h4{
     color: var(--tex-color-main);
+}
+
+
+.section-1{
+    margin: 0%  8%;
 }
 
 .banner>h2{
@@ -180,34 +188,28 @@ h4{
 /* Pie de pagina */
 
 footer {
-    padding: 40px;
-    background-color: var(--secon-bg-color);
-    
+   background-color: var(--secon-bg-color);
+    padding: 4% 0%;
 }
 
-
-.nav-footer{
-    
+.foot-1{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+    
 }
 
 footer  ul  {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     padding: 10px;  
     color: var(--text-bg-color);
     font-size: 0.8rem;
-
 }
 
-.nav-footer {display: flex;}
-
-.nav-footer{
-    
-
-
-
-}
 
 footer p{
     color: var(--text-bg-color);
@@ -219,19 +221,30 @@ footer p{
 
 /*** Responsive */
 
-@media (max-width:412px) {
+@media (max-width:375px) {
 
-    section>div {
+    body{width: 100%;}
+    .home, .nosotros, .testimonios{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 15%;
+           
 
     }
 
-    .card {
+ 
+}
+
+.avatar{padding: 7%;}
+
+/* 
+    .section {
 
         width:100%;
 
-    }
-
+    } */
+/* 
     .formulario,.contacto {
 
         padding:0;
@@ -240,7 +253,7 @@ footer p{
         padding-top:20px;
 
 
-    }
+    } */
 
 
 
