@@ -14,16 +14,12 @@
     --text-color-secon: #B3B2B7;
     --text-bg-color:#FFFFFF;
     --terc-bg-color:#FFEFEA;
-    --weight-1: 400;
-    --weight-2: 500;
-    --weight-3: 700;
 }
 
 body {
-    font-family: 'Be Vietnam Pro', sans-serif;
     background-image: url(../imagenes/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    /* background-size: contain; */
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 li, a {
@@ -37,49 +33,51 @@ li, a {
 
 /* Barra de navegación */
 
-
 nav {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1% ;
-    /* max-width: 950px;
-    margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;    
+    padding: 4% 10% 0%;
     width: 100%;
 }
 
 .menu {
-    display: flex;
-    
+    display: flex;    
 }
 
 nav ul li a {
-    padding: 10px;
     color: var(--tex-color-main);
     font-size: 0.8rem;
-    
+    padding: 10px;   
+}
+
+a:hover{
+    filter: brightness(180%);
 }
 
 .open-menu, .close-menu {
     display: none;
 }
 
-.boton, .boton-text { 
-    border-radius: 50px;
-    padding: 1.3% 4%;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-    color:var(--text-bg-color);
-    font-size: 0.7rem;
+.boton, span { 
     background-color: var(--bg-color-button); 
+    border-radius: 50px;
     border: none;
-    font-weight: var(--weight-3);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    color:var(--text-bg-color);
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 1.3% 4%;        
 }
 
 .boton:hover{
     filter: brightness(135%);
 }
 
+/* Sections */
+
+.section-1{padding: 0% 10%;}
 
 /* Section-1 */
 
@@ -89,24 +87,25 @@ nav ul li a {
 }
 
 .home-img{
-    width: 100%;
     max-width: 360px;
+    width: 100%;    
 }
 
 h1 {
-    font-weight: var(--weight-3);
-    font-size:2.5rem ;
     color: var(--tex-color-main);
+    font-weight: 700;
+    font-size:2.5rem ;    
 }
 
 p{
+    font-weight:500;
     line-height:26px;
-    padding: 4% 0%;
-    font-weight: var(--weight-2);
-
+    padding: 4% 0%;    
 }
 
-.home .boton{margin-top: 3%;}
+.home .boton{
+    margin-top: 3%;
+}
 
     /* Sobre nosotros */
 
@@ -114,41 +113,35 @@ p{
     margin: 20% 0;}
 
 .nosotros-caja1 {
-    margin: 0% 0% 8% }
+    margin: 0% 0% 8%;
+    text-align:center;
+}
 
 h2{
-    font-weight: var(--weight-3);
-    font-size:2.2rem ;
     color: var(--tex-color-main);
+    font-weight: 700;
+    font-size:2rem ;
     text-align: center;
 }
 
 .nosotros-caja2>p {
-    text-align: left;
     color: var(--text-color-secon);
-    font-weight: var(--weight-2);
+    font-weight: 500;
+    text-align: left;   
 }
 
 h4{
     color: var(--tex-color-main);
 }
 
-.subtitulo h4{
+.nosotros-caja2 div h4{
     background-color: var(--terc-bg-color);
-    width: 100%;
-    padding: 2%;
-    border-radius: 15% 0% 0%;
-    
-
+    border-radius: 50px 0px 0px 50px;
+    padding: 1% 0%;
+    width: 100%;    
 }
 
-.subtitulo{
-    display: flex;
-    align-items:  center;
-    font-weight: var(--weight-3);
-    color: var(--tex-color-main);
-}
-
+span{margin-right: 4%;}
 
 /* Testimonios */
 
@@ -157,28 +150,26 @@ h4{
 }
 
 .avatar{
-    position: absolute;
     bottom: 87%;
-    left: 39.5%;
-    width: 65px;
     height: 65px;
-    
+    left: 39.5%;
+    position: absolute;  
+    width: 65px;   
 }
 
 .testimonio-2, .testimonio-3 {display: none;}
 
 .testimonios div p{
     color: var(--text-color-secon);
-    font-weight: var(--weight-2);     
+    font-weight: 500;     
 }
 
-.testimonio-1, .testimonio-2, .testimonio-3{
-    position: relative;
+.testimonio-1, .testimonio-2, .testimonio-3{    
     background-color: #FAFAFA;
-    text-align: center;
-    padding: 10% 8%;  
     margin-top: 20%; 
-    
+    position: relative;
+    padding: 10% 8%;
+    text-align: center;
 }
 
 .contenedor-testimonios .boton{ 
@@ -187,20 +178,18 @@ h4{
 
 /* Section-2 */
 
-
 .section-2 h2{
     color: var(--text-bg-color);
+    font-weight: 700;
     font-size: 2 rem;
-    line-height: 1.3;
-    font-weight: var(--weight-3);
+    line-height: 1.3;    
     padding: 0%;
-
 }
 
 .section-2{
-    background-color:var(--main-bg-color);
-    text-align: center;
+    background-color:var(--main-bg-color);    
     padding: 20% 5%;
+    text-align: center;
 }
 
 .section-2 .boton{
@@ -209,14 +198,43 @@ h4{
     margin-top: 10%;
 }
 
-/* Pie de pagina */
+/* Footer*/
 
 footer {
     background-color: var(--secon-bg-color);
-    padding: 4% 0%;
- }
- 
+    padding: 4% 10%;
+    text-align: center;
+    
+}
 
+.footer-lista{
+    display: flex;
+    justify-content: space-around ;
+    text-align: left;
+}
+
+
+form, .footer-lista, .footer-redes div {
+    padding: 6%;
+}
+
+footer p{
+    color: var(--text-color-secon);
+    font-size: 0.65rem;
+}
+
+.footer-lista ul li a {
+    color: var(--text-bg-color);
+    font-size: 12px;
+    line-height: 22px;
+}
+
+input {
+    border-radius: 20px;
+    border:none;
+    font-size: 0.7rem;
+    padding: 1.3% 4%;       
+    }   
 
 /* Media queries */
 
@@ -253,13 +271,14 @@ nav ul li a {
     padding: 3% 4.6%;
 }
 
-nav .boton{display: none;}
+nav .boton{
+    display: none;}
 }
 
 
 @media (min-width: 950px) {
 
-/* Section-1 */
+    /* Section-1 */
 
     /* Home */
 
@@ -269,11 +288,11 @@ nav .boton{display: none;}
     }
     
     .home{
-        flex-direction: row-reverse;
         align-items: center;
+        flex-direction: row-reverse;        
         margin: 0 auto;
         padding-top: 5%;
-        
+        text-align:left;
     }
 
     .nosotros {
@@ -281,13 +300,18 @@ nav .boton{display: none;}
         margin: 7% 0%;
     }
 
-    .nosotros-caja1 {margin: 0%;}
+    .nosotros-caja1, .nosotros-caja1 h2 {
+        margin: 0%;
+        text-align:left;
+    }
 
-    .subtitulo h4{
+    .nosotros-caja2 div h4{
         background:none;
     }
 
-    .nosotros-caja2 p{padding-left: 12.5%;}
+    .nosotros-caja2 p{
+        padding-left: 15%;
+    }    
 
     /* Testimonios */
 
@@ -301,18 +325,18 @@ nav .boton{display: none;}
 .testimonio-2, .testimonio-3 {display:block ;}
 
 .testimonio-1, .testimonio-2, .testimonio-3{
-    padding: 5% 3%;  
-    margin: 9% 1% 3%; 
-    
+    margin: 9% 1% 3%;
+    padding: 5% 3%;   
 }
-.contenedor-testimonios .boton{ margin: 2% 0% 12%;}
-/* Section-2 */
 
+.contenedor-testimonios .boton{ margin: 2% 0% 12%;}
+
+/* Section-2 */
 
 .section-2{
     display: flex;
-    padding: 4% 10%;
     justify-content: space-between;
+    padding: 4% 10%;    
 }
 
 .section-2 .boton{
@@ -323,3 +347,25 @@ nav .boton{display: none;}
     flex-grow: 0.5;
 }
 
+/* Footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-lista ul li{
+    margin-right: 80px;
+}
+
+form, .footer-lista, .footer-redes div {
+    padding: 0%;
+}
+
+.footer-redes{order: -1;}
+
+.formulario{
+    order: 1;
+    text-align: center;
+}
+}
