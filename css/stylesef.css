@@ -27,10 +27,6 @@ li, a {
     text-decoration: none;
 }
 
-.section-1 {
-    margin: 5% auto;
-}
-
 /* Barra de navegación */
 
 nav {
@@ -51,8 +47,10 @@ nav ul li a {
     padding: 10px;   
 }
 
-a:hover{
-    filter: brightness(180%);
+nav a:hover,
+nav a:active{
+    color:var(--text-color-secon);
+    filter: brightness(80%);
 }
 
 .open-menu, .close-menu {
@@ -67,9 +65,11 @@ a:hover{
     cursor: pointer;
     color:var(--text-bg-color);
     font-weight: 700;
-    font-size: 0.7rem;
-    padding: 1.3% 4%;        
+    font-size: 0.8rem;
+    padding: 1.6% 4%;        
 }
+
+span{cursor:auto;}
 
 .boton:hover{
     filter: brightness(135%);
@@ -77,18 +77,20 @@ a:hover{
 
 /* Sections */
 
-.section-1{padding: 0% 10%;}
-
-/* Section-1 */
-
+/* Section-1*/
     /* Home */
+
+.section-1{
+    margin: 5% auto;
+    padding: 0% 10%;
+    }
 
 .home {text-align: center;
 }
 
 .home-img{
-    max-width: 360px;
-    width: 100%;    
+    max-width: 580px;
+    width: 100%;     
 }
 
 h1 {
@@ -137,24 +139,26 @@ h4{
 .nosotros-caja2 div h4{
     background-color: var(--terc-bg-color);
     border-radius: 50px 0px 0px 50px;
-    padding: 1% 0%;
+    padding: 1.5% 0%;
     width: 100%;    
 }
+.nosotros-caja2 span{align-self: center;}
 
 span{margin-right: 4%;}
 
-/* Testimonios */
+/* Section-3 */
+    /* Testimonios */
 
 .contenedor-testimonios{
-    text-align: center;
+    text-align: center;    
 }
 
 .avatar{
     bottom: 87%;
     height: 65px;
-    left: 39.5%;
+    left: 40%;
     position: absolute;  
-    width: 65px;   
+    width: 65px;
 }
 
 .testimonio-2, .testimonio-3 {display: none;}
@@ -186,7 +190,7 @@ span{margin-right: 4%;}
     padding: 0%;
 }
 
-.section-2{
+.section3,.section-2{
     background-color:var(--main-bg-color);    
     padding: 20% 5%;
     text-align: center;
@@ -213,7 +217,6 @@ footer {
     text-align: left;
 }
 
-
 form, .footer-lista, .footer-redes div {
     padding: 6%;
 }
@@ -221,6 +224,7 @@ form, .footer-lista, .footer-redes div {
 footer p{
     color: var(--text-color-secon);
     font-size: 0.65rem;
+    padding: 0%;
 }
 
 .footer-lista ul li a {
@@ -233,8 +237,15 @@ input {
     border-radius: 20px;
     border:none;
     font-size: 0.7rem;
-    padding: 1.3% 4%;       
+    padding: 1.8% 4%; 
+    color:var(--main-bg-color);     
     }   
+
+.footer-lista a:hover,
+.footer-lista a:active{
+    color: var(--main-bg-color);
+    filter: brightness(130%);       
+}
 
 /* Media queries */
 
@@ -278,8 +289,7 @@ nav .boton{
 
 @media (min-width: 950px) {
 
-    /* Section-1 */
-
+/* Section-1 */
     /* Home */
 
     .home, .nosotros{
@@ -293,12 +303,20 @@ nav .boton{
         margin: 0 auto;
         padding-top: 5%;
         text-align:left;
+        width: 100%;
     }
 
+    .home div{
+        width:  40%;}
+    
     .nosotros {
         align-items: flex-start;
         margin: 7% 0%;
+        width: 100%;
     }
+
+    .nosotros-caja2{
+        margin-left: 15%;}
 
     .nosotros-caja1, .nosotros-caja1 h2 {
         margin: 0%;
@@ -313,6 +331,7 @@ nav .boton{
         padding-left: 15%;
     }    
 
+/* Section-3 */
     /* Testimonios */
 
 .avatar{
@@ -320,7 +339,8 @@ nav .boton{
     left: 39.5%;
     }
 
-.testimonios{display: flex;}
+.testimonios{display: flex;
+}
 
 .testimonio-2, .testimonio-3 {display:block ;}
 
@@ -362,10 +382,17 @@ form, .footer-lista, .footer-redes div {
     padding: 0%;
 }
 
-.footer-redes{order: -1;}
-
-.formulario{
-    order: 1;
-    text-align: center;
+.footer-redes{
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5%;
 }
+
+form{
+    order: 1;
+    width: 25%;   
+}
+
 }
